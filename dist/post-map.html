@@ -1,0 +1,48 @@
+<link rel="import" href="components/polymer/polymer.html">
+<!-- <link rel="import" href="post-service/post-service.html"> -->
+<link rel="import" href="components/google-map/google-map.html">
+
+<polymer-element name="post-map" attributes="posts">
+  <template>
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+    }
+    :host {
+      height: 300px;
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    google-map {
+      display: block;
+      height: 100%;
+    }
+    </style>
+
+    <!-- <post-service id="service" posts="{{posts}}">
+    </post-service> -->
+
+
+    <google-map id="map" latitude="37.779" longitude="-122.3892" zoom="5">
+      <template repeat="{{post in posts}}">
+        <google-map-marker
+          hidden?="{{!post.selected}}"
+          uid="{{post.uid}}"
+          latitude="{{post.latitude}}"
+          longitude="{{post.longitude}}"
+          title="{{post.username}}"
+          draggable="true"></google-map-marker>
+
+      </template>
+    </google-map>
+
+  </template>
+
+  <script>
+  Polymer({
+  });
+  </script>
+
+</polymer-element>
