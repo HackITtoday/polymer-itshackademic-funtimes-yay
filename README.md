@@ -6,7 +6,7 @@ May not.
 ## How to use
 First install node.js, bower, grunt-cli (See http://gruntjs.com/getting-started)
 On a command line:
-`npm install` (grunt depdendencies)
-`bower install` (polymer dependencies)
-`grunt serve` (start the web server)
-visit `localhost:3000` in your browser
+* `npm install` (grunt depdendencies)
+* `bower install` (polymer dependencies)
+* `grunt serve` (start the web server)
+* visit `localhost:3000` in your browser
