@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       },
       main: {
         options: {
-          base: 'dist'
+          base: 'src'
         }
       }
     },
@@ -33,15 +33,15 @@ module.exports = function (grunt) {
       },
 
       html: {
-        files: ['dist/**/*.html']
+        files: ['src/**/*.html']
       },
 
       css: {
-        files: ['dist/**/*.css']
+        files: ['src/**/*.css']
       },
 
       js: {
-        files: ['dist/**/*.js']
+        files: ['src/**/*.js']
       }
     }
 
