@@ -1,7 +1,7 @@
 <link rel="import" href="components/polymer/polymer.html">
 <link rel="import" href="components/google-map/google-map.html">
 
-<polymer-element name="post-map" attributes="posts">
+<polymer-element name="post-map" attributes="posts, show">
   <template>
     <style>
     :host {
@@ -23,7 +23,7 @@
     <google-map id="map" latitude="37.779" longitude="-122.3892" zoom="5">
       <template repeat="{{post in posts}}">
         <google-map-marker
-          hidden?="{{!post.selected}}"
+          hidden?="{{(show == 'favorites' && !post.favorite) || !post.selected}}"
           uid="{{post.uid}}"
           latitude="{{post.latitude}}"
           longitude="{{post.longitude}}"
