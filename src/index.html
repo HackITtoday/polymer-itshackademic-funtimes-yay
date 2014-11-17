@@ -1,29 +1,22 @@
 <!doctype html>
 <html>
-
 <head>
 
   <title>Map & List</title>
-
-  <meta name="viewport"
-  content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <link rel="stylesheet" href="app.css">
 
-  <script src="components/webcomponentsjs/webcomponents.js"> </script>
-  <link rel="import" href="/components/font-roboto/roboto.html">
+  <script src="components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="components/font-roboto/roboto.html">
   <link rel="import" href="components/core-header-panel/core-header-panel.html">
   <link rel="import" href="components/core-toolbar/core-toolbar.html">
   <link rel="import" href="components/paper-tabs/paper-tabs.html">
-  <link rel="import" href="post-list.html">
-  <link rel="import" href="post-map.html">
   <link rel="import" href="post-service/post-service.html">
-
-
+  <link rel="import" href="post-map.html">
+  <link rel="import" href="post-list.html">
 </head>
 
 <body unresolved fullbleed layout vertical>
-
   <polymer-element name="my-app" attributes="show">
     <template>
       <post-service posts="{{posts}}"></post-service>
@@ -39,6 +32,7 @@
       });
     </script>
   </polymer-element>
+
   <core-header-panel flex>
     <core-toolbar>
       <!-- Add the following code -->
@@ -47,16 +41,10 @@
         <paper-tab name="favorites">Favorites</paper-tab>
       </paper-tabs>
     </core-toolbar>
-
     <div class="container" layout vertical center>
-
       <my-app show="messages"></my-app>
-
     </div>
-
   </core-header-panel>
-
-  <script src="app.js"></script>
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>
