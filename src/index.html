@@ -3,26 +3,18 @@
 
 <head>
 
-  <title>unquote</title>
+  <title>Map & List</title>
 
   <meta name="viewport"
   content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
   <link rel="stylesheet" href="app.css">
 
-  <script src="components/webcomponentsjs/webcomponents.js">
-  </script>
-
-  <link rel="import"
-    href="/components/font-roboto/roboto.html">
-
-  <!-- Add your imports here, like so: -->
-  <link rel="import"
-    href="components/core-header-panel/core-header-panel.html">
-  <link rel="import"
-    href="components/core-toolbar/core-toolbar.html">
-  <link rel="import"
-    href="components/paper-tabs/paper-tabs.html">
+  <script src="components/webcomponentsjs/webcomponents.js"> </script>
+  <link rel="import" href="/components/font-roboto/roboto.html">
+  <link rel="import" href="components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="components/paper-tabs/paper-tabs.html">
   <link rel="import" href="post-list.html">
   <link rel="import" href="post-map.html">
   <link rel="import" href="post-service/post-service.html">
@@ -45,16 +37,9 @@
           this.posts = this.posts || [];
         }
       });
-
-      // console.log(document);
-
-
     </script>
   </polymer-element>
-
-
   <core-header-panel flex>
-
     <core-toolbar>
       <!-- Add the following code -->
       <paper-tabs class="fit" selected="messages" flex>
@@ -62,10 +47,6 @@
         <paper-tab name="favorites">Favorites</paper-tab>
       </paper-tabs>
     </core-toolbar>
-
-    <!-- <post-service id="service" posts="{{posts}}"></post-service> -->
-
-
 
     <div class="container" layout vertical center>
 
